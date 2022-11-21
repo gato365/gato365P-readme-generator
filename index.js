@@ -1,9 +1,13 @@
-// Title
-// Badges
-// Image of
-// Overview (Horizontal Line)
-// Installation (Horizontal Line)
-// Usage (Horizontal Line)
-// Required Knowledge (Horizontal Line)
-// Demonstration (Horizontal Line)
-// Code of Conduct
+// TODO: Include packages needed for this application
+
+// TODO: Create an array of questions for user input
+const questions = [];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
