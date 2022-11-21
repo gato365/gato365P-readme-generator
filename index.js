@@ -19,7 +19,7 @@ const fs = require('fs');
 // 6. Usage (Horizontal Line)
 // 7. Required Knowledge (Horizontal Line)
 // 8. Demonstration (Horizontal Line)
-// 9. Future Updates
+// 9. Future Updates & Refactor Tasks
 // 10. Code of Conduct
 
 // TODO: Create an array of questions for user input
