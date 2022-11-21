@@ -1,0 +1,10 @@
+{
+	"toBeDelivered": true,
+	"phone": "1234567899",
+	"ordername": "Nope, all good!",
+	"size": "large",
+	"quantity": 5,
+	"toppings": "PepperoniCheese",
+	"beverage": "Pepsi",
+	"comments": "Nope, all good!"
+}

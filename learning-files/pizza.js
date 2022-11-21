@@ -3,7 +3,8 @@
  * run example by writing `node pizza.js` in your console
  */
 
- import inquirer from '../lib/inquirer.js';
+ const inquirer = require('inquirer');
+ const fs = require('fs');
 
  console.log('Hi, welcome to Node Pizza');
  
@@ -29,6 +30,12 @@
        return 'Please enter a valid phone number';
      },
    },
+   {
+    type: 'input',
+    name: 'ordername',
+    message: 'What is your name?',
+    default: 'Nope, all good!',
+  },
    {
      type: 'list',
      name: 'size',
@@ -93,7 +100,18 @@
    },
  ];
  
+//  inquirer.prompt(questions).then((answers) => {
+//    console.log('\nOrder receipt:');
+//    console.log(JSON.stringify(answers, null, '  '));
+//  });
+
+
+
+
  inquirer.prompt(questions).then((answers) => {
-   console.log('\nOrder receipt:');
-   console.log(JSON.stringify(answers, null, '  '));
- });
+    const filename = `${answers.ordername.toLowerCase().split(' ').join('')}.json`;
+
+    fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+  });
