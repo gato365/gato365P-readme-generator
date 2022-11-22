@@ -63,7 +63,7 @@ const questions = [
     },
     // 3.
     {
-        type: list,
+        type: 'list',
         name: 'uploadBadges',
         message: '3. Are there any badges needed for this repo?',
         choices: ['Yes', 'No']
@@ -74,72 +74,72 @@ const questions = [
         name: 'badgeName',
         message: '3a. What are the names of the badges?',
         when: (answers) => answers.uploadBadges === 'Yes'
-    },
+    } //,
 
-    // 4a.
-    {
-        type: 'input',
-        name: 'paragraph1',
-        message: 'Why was this repo created? - What problem does this repo solve?',
-    },
-      // 4b.
-    {
-        type: 'input',
-        name: 'paragraph2',
-        message: 'What learning points should be mentioned?',
-    },
-      // 4c.
-    {
-        type: 'input',
-        name: 'paragraph3',
-        message: 'How is the repo important? - How does the repo stand out?',
-    },
+    // // 4a.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph1',
+    //     message: 'Why was this repo created? - What problem does this repo solve?',
+    // },
+    // // 4b.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph2',
+    //     message: 'What learning points should be mentioned?',
+    // },
+    // // 4c.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph3',
+    //     message: 'How is the repo important? - How does the repo stand out?',
+    // },
 
-    // 5.
-    {
-      type: 'list',
-        name: 'installationNeeded',
-        message: 'Do you need to mention a special installation instruction?',
-    choices: ['Yes', 'No']
-    },
-     // 5a.
-     {
-        type: 'input',
-        name: 'installationInfo',
-        message: '5a. How should the information be installed?',
-        when: (answers) => answers.installationNeeded === 'Yes'
-    },
-    // 6.
-    {
-        type: 'input',
-        name: 'usageDetails',
-        message: 'How should this repository be used? Explain.',
-    },
-    // 7.
-    {
-        type: 'input',
-        name: 'requiredKnowledge',
-        message:'What required knowledge is needed for the usage for this repo?',
-    },
-    // 8.
-    {
-        type: 'input',
-        name: 'demoCode',
-        message:' Upload the code to demonstrate usage of repo.',
-    },
-    // 9.
-    {
-        type: 'list',
-        name: 'updatesOrRefactor',
-        message:'What future updates will be included and/or how will this code be refactored?',
-    },
-    // 10.
-    {
-        type: 'list',
-        name: 'codeConduct',
-        message:'Should you inlude the Code of Conduct',
-    choices: ['Yes', 'No']
-    }
+    // // 5.
+    // {
+    //     type: 'list',
+    //     name: 'installationNeeded',
+    //     message: 'Do you need to mention a special installation instruction?',
+    //     choices: ['Yes', 'No']
+    // },
+    // // 5a.
+    // {
+    //     type: 'input',
+    //     name: 'installationInfo',
+    //     message: '5a. How should the information be installed?',
+    //     when: (answers) => answers.installationNeeded === 'Yes'
+    // },
+    // // 6.
+    // {
+    //     type: 'input',
+    //     name: 'usageDetails',
+    //     message: 'How should this repository be used? Explain.',
+    // },
+    // // 7.
+    // {
+    //     type: 'input',
+    //     name: 'requiredKnowledge',
+    //     message: 'What required knowledge is needed for the usage for this repo?',
+    // },
+    // // 8.
+    // {
+    //     type: 'input',
+    //     name: 'demoCode',
+    //     message: ' Upload the code to demonstrate usage of repo.',
+    // },
+    // // 9.
+    // {
+    //     type: 'list',
+    //     name: 'updatesOrRefactor',
+    //     message: 'What future updates will be included and/or how will this code be refactored?',
+    // },
+    // // 10.
+    // {
+    //     type: 'list',
+    //     name: 'codeConduct',
+    //     message: 'Should you inlude the Code of Conduct',
+    //     choices: ['Yes', 'No']
+    //}
 ];
 
 
@@ -160,9 +160,9 @@ const questions = [
 
 
 inquirer.prompt(questions).then((answers) => {
-        const filename = `${answers.ordername.toLowerCase().split(' ').join('')}.json`;
+    const filename = `${answers.repoName.toLowerCase().split(' ').join('')}.json`;
 
-        fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
-        );
-    });
+    fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
+        err ? console.log(err) : console.log('Success!')
+    );
+});
