@@ -1,7 +1,22 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown =  require('./utils/generateMarkdown')
+const generateMarkdown =  require('./utils/generateMarkdown');
+
+
+// import licensesInfo from './licenses-json.json' assert {type: 'json'};
+
+const licensesData = require('./licenses-json');
+
+
+
+var fullLicences = licensesData.map(function(x){
+    return x[Object.keys(x)[0]];
+});
+
+// var abbrLicences = licensesData.map(function(x){
+//     return x[Object.keys(x)[0]];
+// });
 
 
 
@@ -65,12 +80,11 @@ const questions = [
     },
     // 3a.
     {
-        type: 'input',
+        type: 'list',
         name: 'badgeName', // 
-        message: '3a. What are the names of the badges?',
-        when: (answers) => answers.uploadBadges === 'Yes'
-        //[R, Pyhton, HTML, CSS, JavaScript, C++, Node JS, REACT] ONLY BADGES for licenses
-        // ![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
+        message: '3a. What is the name of the badge?',
+        when: (answers) => answers.uploadBadges === 'Yes',
+        choices: fullLicences
     },
 
 
@@ -165,7 +179,7 @@ const questions = [
     {
         type: 'list',
         name: 'emailQuestions',
-        message: 'Are there questions, email me.' (always)
+        message: 'Are there questions, email me.' 
     }
 
 

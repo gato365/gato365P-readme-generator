@@ -1,0 +1,170 @@
+"Academic Free License v3.0" "afl-3.0" "
+    {
+    fullName: Academic Free License v3.0,
+abbrName: afl-3.0,
+},"
+"Apache license 2.0" "apache-2.0" "
+    {
+    fullName: Apache license 2.0,
+abbrName: apache-2.0,
+},"
+"Artistic license 2.0" "artistic-2.0" "
+    {
+    fullName: Artistic license 2.0,
+abbrName: artistic-2.0,
+},"
+"Boost Software License 1.0" "bsl-1.0" "
+    {
+    fullName: Boost Software License 1.0,
+abbrName: bsl-1.0,
+},"
+"BSD 2-clause \"Simplified\" license" "bsd-2-clause" "
+    {
+    fullName: BSD 2-clause \"Simplified\" license,
+abbrName: bsd-2-clause,
+},"
+"BSD 3-clause \"New\" or \"Revised\" license" "bsd-3-clause" "
+    {
+    fullName: BSD 3-clause \"New\" or \"Revised\" license,
+abbrName: bsd-3-clause,
+},"
+"BSD 3-clause Clear license" "bsd-3-clause-clear" "
+    {
+    fullName: BSD 3-clause Clear license,
+abbrName: bsd-3-clause-clear,
+},"
+"Creative Commons license family" "cc" "
+    {
+    fullName: Creative Commons license family,
+abbrName: cc,
+},"
+"Creative Commons Zero v1.0 Universal" "cc0-1.0" "
+    {
+    fullName: Creative Commons Zero v1.0 Universal,
+abbrName: cc0-1.0,
+},"
+"Creative Commons Attribution 4.0" "cc-by-4.0" "
+    {
+    fullName: Creative Commons Attribution 4.0,
+abbrName: cc-by-4.0,
+},"
+"Creative Commons Attribution Share Alike 4.0" "cc-by-sa-4.0" "
+    {
+    fullName: Creative Commons Attribution Share Alike 4.0,
+abbrName: cc-by-sa-4.0,
+},"
+"Do What The F*ck You Want To Public License" "wtfpl" "
+    {
+    fullName: Do What The F*ck You Want To Public License,
+abbrName: wtfpl,
+},"
+"Educational Community License v2.0" "ecl-2.0" "
+    {
+    fullName: Educational Community License v2.0,
+abbrName: ecl-2.0,
+},"
+"Eclipse Public License 1.0" "epl-1.0" "
+    {
+    fullName: Eclipse Public License 1.0,
+abbrName: epl-1.0,
+},"
+"Eclipse Public License 2.0" "epl-2.0" "
+    {
+    fullName: Eclipse Public License 2.0,
+abbrName: epl-2.0,
+},"
+"European Union Public License 1.1" "eupl-1.1" "
+    {
+    fullName: European Union Public License 1.1,
+abbrName: eupl-1.1,
+},"
+"GNU Affero General Public License v3.0" "agpl-3.0" "
+    {
+    fullName: GNU Affero General Public License v3.0,
+abbrName: agpl-3.0,
+},"
+"GNU General Public License family" "gpl" "
+    {
+    fullName: GNU General Public License family,
+abbrName: gpl,
+},"
+"GNU General Public License v2.0" "gpl-2.0" "
+    {
+    fullName: GNU General Public License v2.0,
+abbrName: gpl-2.0,
+},"
+"GNU General Public License v3.0" "gpl-3.0" "
+    {
+    fullName: GNU General Public License v3.0,
+abbrName: gpl-3.0,
+},"
+"GNU Lesser General Public License family" "lgpl" "
+    {
+    fullName: GNU Lesser General Public License family,
+abbrName: lgpl,
+},"
+"GNU Lesser General Public License v2.1" "lgpl-2.1" "
+    {
+    fullName: GNU Lesser General Public License v2.1,
+abbrName: lgpl-2.1,
+},"
+"GNU Lesser General Public License v3.0" "lgpl-3.0" "
+    {
+    fullName: GNU Lesser General Public License v3.0,
+abbrName: lgpl-3.0,
+},"
+"ISC" "isc" "
+    {
+    fullName: ISC,
+abbrName: isc,
+},"
+"LaTeX Project Public License v1.3c" "lppl-1.3c" "
+    {
+    fullName: LaTeX Project Public License v1.3c,
+abbrName: lppl-1.3c,
+},"
+"Microsoft Public License" "ms-pl" "
+    {
+    fullName: Microsoft Public License,
+abbrName: ms-pl,
+},"
+"MIT" "mit" "
+    {
+    fullName: MIT,
+abbrName: mit,
+},"
+"Mozilla Public License 2.0" "mpl-2.0" "
+    {
+    fullName: Mozilla Public License 2.0,
+abbrName: mpl-2.0,
+},"
+"Open Software License 3.0" "osl-3.0" "
+    {
+    fullName: Open Software License 3.0,
+abbrName: osl-3.0,
+},"
+"PostgreSQL License" "postgresql" "
+    {
+    fullName: PostgreSQL License,
+abbrName: postgresql,
+},"
+"SIL Open Font License 1.1" "ofl-1.1" "
+    {
+    fullName: SIL Open Font License 1.1,
+abbrName: ofl-1.1,
+},"
+"University of Illinois/NCSA Open Source License" "ncsa" "
+    {
+    fullName: University of Illinois/NCSA Open Source License,
+abbrName: ncsa,
+},"
+"The Unlicense" "unlicense" "
+    {
+    fullName: The Unlicense,
+abbrName: unlicense,
+},"
+"zLib License" "zlib" "
+    {
+    fullName: zLib License,
+abbrName: zlib,
+},"
