@@ -31,11 +31,66 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
 
-  # ${data.repoName} 
+  # Repository Name: ${data.repoName} 
   <hr/>
 
 
   ${renderLicenseSection(data.license)}
+
+
+  
+
+
+// ${data.uploadImage}
+   
+// ${data.imageName}
+    
+// ${data.imageDesription}
+    
+// ${data.uploadBadges}
+        
+// ${data.badgeName} 
+
+// ONLY BADGES for licenses
+// ![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
+
+## Overview
+${data.paragraph1}
+
+${data.paragraph2}
+
+${data.paragraph3}
+
+
+// ${data.installationNeeded}
+
+// ${data.installationInfo}
+
+## How to Use Application
+${data.usageDetails}
+
+## Background Knowledge
+${data.requiredKnowledge}
+
+## Snippets of Demonstration
+${data.demoCode}
+
+## What will or could change in the future
+${data.updatesOrRefactor}
+
+## Code of Conduct
+${data.codeConduct}
+
+## Contact Information
+User Name: ${data.githubUsername}
+Email: ${data.email}
+
+${data.isTesting}
+
+${data.testingNames}
+
+
+
 
 `;
 }
