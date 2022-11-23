@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMarkdown =  require('./utils/generateMarkdown')
 
 
 
@@ -66,11 +66,11 @@ const questions = [
     // 3a.
     {
         type: 'input',
-        name: 'badgeName',
+        name: 'badgeName', // 
         message: '3a. What are the names of the badges?',
         when: (answers) => answers.uploadBadges === 'Yes'
-        //[R, Pyhton, HTML, CSS, JavaScript, C++, Node JS, REACT]
-        // !![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
+        //[R, Pyhton, HTML, CSS, JavaScript, C++, Node JS, REACT] ONLY BADGES for licenses
+        // ![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
     },
 
 
@@ -177,22 +177,36 @@ const questions = [
 
 
 // // TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-
-// // TODO: Create a function to initialize app
-// function init() { }
-
-// // Function call to initialize app
-// init();
-
-
-
-
-inquirer.prompt(questions).then((answers) => {
-    const filename = `${answers.repoName.toLowerCase().split(' ').join('')}.json`;
+function writeToFile(fileName, data) { 
 
     
-    fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
-        err ? console.log(err) : console.log('Success!')
-    );
-});
+    var stringMarkdown = generateMarkdown(data);
+        fs.writeFile(fileName, stringMarkdown, (err) =>
+        err ? console.log(err) : console.log('Success!'));
+}
+
+
+
+// // TODO: Create a function to initialize app
+function init() { 
+    inquirer.prompt(questions).then((data) => {
+        writeToFile(`${data.repoName}.md`,data);
+    });
+    
+    
+}
+
+// // Function call to initialize app
+init();
+
+
+
+
+// inquirer.prompt(questions).then((answers) => {
+//     const filename = `${answers.repoName.toLowerCase().split(' ').join('')}.json`;
+
+    
+//     fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
+//         err ? console.log(err) : console.log('Success!')
+//     );
+// });
