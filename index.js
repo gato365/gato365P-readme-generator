@@ -25,19 +25,7 @@ const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 
-// const questions = [{
-//     type: 'list',
-//     name: 'databasetype',
-//     message: 'Choose database :',
-//     choices: ['mongoDB', 'mysql [alpha]', 'firebase [alpha]', 'url [alpha]'],
-//     default: 'mongoDB'
-// },
-// {
-//     type: 'input',
-//     name: 'url',
-//     message: 'Enter the URL',
-//     when: (answers) => answers.databasetype === 'mongoDB'
-// }]
+
 
 const questions = [
     // 1.
@@ -49,18 +37,25 @@ const questions = [
     },
     // 2.
 
-    {
-        type: 'list',
-        name: 'uploadImage',
-        message: '2. Do you have a markup image of desired repo?',
-        choices: ['Yes', 'No']
-    },
-    {
-        type: 'input',
-        name: 'imageName',
-        message: '2a. What is the name of the image?',
-        when: (answers) => answers.uploadImage === 'Yes'
-    },
+    // {
+    //     type: 'list',
+    //     name: 'uploadImage',
+    //     message: '2. Do you have a markup image of desired repo?',
+    //     choices: ['Yes', 'No']
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'imageName',
+    //     message: '2a. What is the name of the image?',
+    //     when: (answers) => answers.uploadImage === 'Yes'
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'imageDesription',
+    //     message: '2b. Provide a description for the image.',
+    //     when: (answers) => answers.uploadImage === 'Yes'
+    // },
+
     // 3.
     {
         type: 'list',
@@ -74,7 +69,11 @@ const questions = [
         name: 'badgeName',
         message: '3a. What are the names of the badges?',
         when: (answers) => answers.uploadBadges === 'Yes'
-    } //,
+        //[R, Pyhton, HTML, CSS, JavaScript, C++, Node JS, REACT]
+        // !![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
+    },
+
+
 
     // // 4a.
     // {
@@ -125,7 +124,7 @@ const questions = [
     // {
     //     type: 'input',
     //     name: 'demoCode',
-    //     message: ' Upload the code to demonstrate usage of repo.',
+    //     message: 'Upload the code to demonstrate usage of repo.',
     // },
     // // 9.
     // {
@@ -139,7 +138,37 @@ const questions = [
     //     name: 'codeConduct',
     //     message: 'Should you inlude the Code of Conduct',
     //     choices: ['Yes', 'No']
-    //}
+    // },
+
+
+    // {
+    //     type: 'input',
+    //     name: 'githubUsername',
+    //     message: ' What is you GitHub username? '
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'email',
+    //     message: 'What is your email address?'
+    // },
+    // {
+    //     type: 'list',
+    //     name: 'isTesting',
+    //     message: 'Do you have any testing in this application?',
+    //     choices: ['Yes', 'No']
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'testingNames',
+    //     message: 'Provide.'
+    // },
+    // {
+    //     type: 'list',
+    //     name: 'emailQuestions',
+    //     message: 'Are there questions, email me.' (always)
+    // }
+
+
 ];
 
 
@@ -162,6 +191,7 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
     const filename = `${answers.repoName.toLowerCase().split(' ').join('')}.json`;
 
+    
     fs.writeFile(filename, JSON.stringify(answers, null, '\t'), (err) =>
         err ? console.log(err) : console.log('Success!')
     );
