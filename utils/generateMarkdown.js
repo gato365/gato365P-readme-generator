@@ -14,18 +14,17 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
-  // renderLicenseLink(license)
-//renderLicenseBadge(license)
 
-if( license === null){
-  return ''
 
-} else {
-  return `
-  ${  renderLicenseSection(license)}
+  if (license === null) {
+    return ''
+
+  } else {
+    return `
+  ${renderLicenseSection(license)}
   ${renderLicenseLink(license)}`
 
-}
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -37,9 +36,7 @@ function generateMarkdown(data) {
 
 
   ${renderLicenseSection(data.license)}
-  if( renderLicenseSection(license) != null){
-    renderLicenseSection(license)
-  }
+
 `;
 }
 
