@@ -1,25 +1,33 @@
 
-// const licensesData = require('./licenses-json');
 
 
-// var fullLicences = licensesData.map(function(x){
-//     return x[Object.keys(x)[0]];
-// });
+// Help with license information
+// https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+//https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
 
-// var abbrLicences = licensesData.map(function(x){
-//     return x[Object.keys(x)[1]];
-// });
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  //https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
+
+  
+
+  if (license !== null) {
+
+    return '[![License](https://img.shields.io/badge/License-' + license + '-lightblue.svg)]()';
+  } else{
+    return ''
+  }
+  
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  // https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+  
+
+ 
 }
 
 // TODO: Create a function that returns the license section of README
@@ -48,26 +56,10 @@ function generateMarkdown(data) {
   <hr/>
 
 
-  // ${renderLicenseSection(data.license)}
-
-
-  
-
-
-// ${data.uploadImage}
-   
-// ${data.imageName}
-    
-// ${data.imageDesription}
-    
-// ${data.uploadBadges}
-        
-// ${data.badgeName} 
-
-// ONLY BADGES for licenses
-// ![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
+ ${renderLicenseBadge(data.license)}
 
 ## Overview
+<hr/>
 ${data.paragraph1}
 
 ${data.paragraph2}
@@ -75,34 +67,23 @@ ${data.paragraph2}
 ${data.paragraph3}
 
 
-// ${data.installationNeeded}
-
-// ${data.installationInfo}
+ ## Installation Information
+ <hr/>
+ ${data.installationInfo}
 
 ## How to Use Application
+<hr/>
 ${data.usageDetails}
 
-## Background Knowledge
-${data.requiredKnowledge}
-
-## Snippets of Demonstration
-${data.demoCode}
-
-## What will or could change in the future
-${data.updatesOrRefactor}
-
-## Code of Conduct
-${data.codeConduct}
 
 ## Contact Information
+<hr/>
 User Name: ${data.githubUsername}
 Email: ${data.email}
 
-${data.isTesting}
-
 ${data.testingNames}
 
-
+${data.emailQuestions}
 
 
 `;

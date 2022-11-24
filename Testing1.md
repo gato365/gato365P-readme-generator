@@ -1,24 +1,16 @@
 
 
-  # Repository Name: Testing1 
+  # Repository Name: testing1 
   <hr/>
 
 
-  // undefined
+ [![License](https://img.shields.io/badge/License-Academic Free License v3.0-lightblue.svg)]()
 
 
   
 
 
-// undefined
-   
-// undefined
-    
-// undefined
-    
-// No
-        
-// undefined 
+
 
 // ONLY BADGES for licenses
 // ![ alt_text ](https://img.shields.io/badge/Tesla-text-CC0000?style=for-the-badge&logo=Tesla)
