@@ -4,7 +4,7 @@ const fs = require('fs');
 const generateMarkdown =  require('./utils/generateMarkdown');
 
 
-// import licensesInfo from './licenses-json.json' assert {type: 'json'};
+
 
 const licensesData = require('./licenses-json');
 
@@ -47,140 +47,87 @@ const questions = [
     {
         type: 'input',
         name: 'repoName',
-        message: 'What is title of your repository?',
+        message: '1. What is title of your repository?',
 
     },
     // 2.
-
-    {
-        type: 'list',
-        name: 'uploadImage',
-        message: '2. Do you have a markup image of desired repo?',
-        choices: ['Yes', 'No']
-    },
-    {
-        type: 'input',
-        name: 'imageName',
-        message: '2a. What is the name of the image?',
-        when: (answers) => answers.uploadImage === 'Yes'
-    },
-    {
-        type: 'input',
-        name: 'imageDesription',
-        message: '2b. Provide a description for the image.',
-        when: (answers) => answers.uploadImage === 'Yes'
-    },
-
-    // 3.
     {
         type: 'list',
         name: 'uploadBadges',
-        message: '3. Are there any badges needed for this repo?',
+        message: '2. Is there a License used for this repo?',
         choices: ['Yes', 'No']
     },
-    // 3a.
+    // 2a.
     {
         type: 'list',
         name: 'badgeName', // 
-        message: '3a. What is the name of the badge?',
+        message: '2a. What is the name of the badge?',
         when: (answers) => answers.uploadBadges === 'Yes',
         choices: fullLicences
     },
+    // // 3a.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph1',
+    //     message: '3a. Why was this repo created? - What problem does this repo solve?',
+    // },
+    // // 4b.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph2',
+    //     message: '4b. What learning points should be mentioned?',
+    // },
+    // // 4c.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph3',
+    //     message: '4c. How is the repo important? - How does the repo stand out?',
+    // },
 
-
-
-    // 4a.
-    {
-        type: 'input',
-        name: 'paragraph1',
-        message: 'Why was this repo created? - What problem does this repo solve?',
-    },
-    // 4b.
-    {
-        type: 'input',
-        name: 'paragraph2',
-        message: 'What learning points should be mentioned?',
-    },
-    // 4c.
-    {
-        type: 'input',
-        name: 'paragraph3',
-        message: 'How is the repo important? - How does the repo stand out?',
-    },
-
-    // 5.
-    {
-        type: 'list',
-        name: 'installationNeeded',
-        message: 'Do you need to mention a special installation instruction?',
-        choices: ['Yes', 'No']
-    },
-    // 5a.
-    {
-        type: 'input',
-        name: 'installationInfo',
-        message: '5a. How should the information be installed?',
-        when: (answers) => answers.installationNeeded === 'Yes'
-    },
-    // 6.
-    {
-        type: 'input',
-        name: 'usageDetails',
-        message: 'How should this repository be used? Explain.',
-    },
-    // 7.
-    {
-        type: 'input',
-        name: 'requiredKnowledge',
-        message: 'What required knowledge is needed for the usage for this repo?',
-    },
-    // 8.
-    {
-        type: 'input',
-        name: 'demoCode',
-        message: 'Upload the code to demonstrate usage of repo.',
-    },
-    // 9.
-    {
-        type: 'list',
-        name: 'updatesOrRefactor',
-        message: 'What future updates will be included and/or how will this code be refactored?',
-    },
-    // 10.
-    {
-        type: 'list',
-        name: 'codeConduct',
-        message: 'Should you inlude the Code of Conduct',
-        choices: ['Yes', 'No']
-    },
-
-
-    {
-        type: 'input',
-        name: 'githubUsername',
-        message: ' What is you GitHub username? '
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address?'
-    },
-    {
-        type: 'list',
-        name: 'isTesting',
-        message: 'Do you have any testing in this application?',
-        choices: ['Yes', 'No']
-    },
-    {
-        type: 'input',
-        name: 'testingNames',
-        message: 'Provide.'
-    },
-    {
-        type: 'list',
-        name: 'emailQuestions',
-        message: 'Are there questions, email me.' 
-    }
+    // // 5.
+    // {
+    //     type: 'list',
+    //     name: 'installationNeeded',
+    //     message: '5. Do you need to mention a special installation instruction?',
+    //     choices: ['Yes', 'No']
+    // },
+    // // 5a.
+    // {
+    //     type: 'input',
+    //     name: 'installationInfo',
+    //     message: '5a. How should the information be installed?',
+    //     when: (answers) => answers.installationNeeded === 'Yes'
+    // },
+    // // 6.
+    // {
+    //     type: 'input',
+    //     name: 'usageDetails',
+    //     message: '6. How should this repository be used? Explain.',
+    // },
+    // // 7.
+    // {
+    //     type: 'input',
+    //     name: 'githubUsername',
+    //     message: '7. What is you GitHub username? '
+    // },
+    // // 8.
+    // {
+    //     type: 'input',
+    //     name: 'email',
+    //     message: '8. What is your email address?'
+    // },
+    // // 9.
+    // {
+    //     type: 'input',
+    //     name: 'isTesting',
+    //     message: '9. Provide any testing  information required for this application.'
+    // },
+    // // 10.
+    // {
+    //     type: 'input',
+    //     name: 'emailQuestions',
+    //     message: '10. Instructions on how to contact me. If you have questions' 
+    // }
 
 
 ];
@@ -195,8 +142,7 @@ function writeToFile(fileName, data) {
 
     
     var stringMarkdown = generateMarkdown(data);
-        fs.writeFile(fileName, stringMarkdown, (err) =>
-        err ? console.log(err) : console.log('Success!'));
+    fs.writeFile(fileName, stringMarkdown, (err) => err ? console.log(err) : console.log('Success!'));
 }
 
 

@@ -1,3 +1,15 @@
+
+// const licensesData = require('./licenses-json');
+
+
+// var fullLicences = licensesData.map(function(x){
+//     return x[Object.keys(x)[0]];
+// });
+
+// var abbrLicences = licensesData.map(function(x){
+//     return x[Object.keys(x)[1]];
+// });
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -16,15 +28,16 @@ function renderLicenseSection(license) {
 
 
 
-  if (license === null) {
-    return ''
+  // if (license === null) {
+  //   return ''
 
-  } else {
-    return `
-  ${renderLicenseSection(license)}
-  ${renderLicenseLink(license)}`
+  // } else {
+  //   return `
+  // ${renderLicenseSection(license)}
+  // ${renderLicenseLink(license)}
+  // `
 
-  }
+  // }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -35,7 +48,7 @@ function generateMarkdown(data) {
   <hr/>
 
 
-  ${renderLicenseSection(data.license)}
+  // ${renderLicenseSection(data.license)}
 
 
   
