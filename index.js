@@ -64,69 +64,69 @@ const questions = [
         when: (answers) => answers.isLicense === 'Yes',
         choices: fullLicences
     },
-    // 3a.
-    {
-        type: 'input',
-        name: 'paragraph1',
-        message: '3a. Why was this repo created? - What problem does this repo solve?',
-    },
-    // 4b.
-    {
-        type: 'input',
-        name: 'paragraph2',
-        message: '4b. What learning points should be mentioned?',
-    },
-    // 4c.
-    {
-        type: 'input',
-        name: 'paragraph3',
-        message: '4c. How is the repo important? - How does the repo stand out?',
-    },
+    // // 3a.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph1',
+    //     message: '3a. Why was this repo created? - What problem does this repo solve?',
+    // },
+    // // 4b.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph2',
+    //     message: '4b. What learning points should be mentioned?',
+    // },
+    // // 4c.
+    // {
+    //     type: 'input',
+    //     name: 'paragraph3',
+    //     message: '4c. How is the repo important? - How does the repo stand out?',
+    // },
 
-    // 5.
-    {
-        type: 'list',
-        name: 'installationNeeded',
-        message: '5. Do you need to mention a special installation instruction?',
-        choices: ['Yes', 'No']
-    },
-    // 5a.
-    {
-        type: 'input',
-        name: 'installationInfo',
-        message: '5a. How should the information be installed?',
-        when: (answers) => answers.installationNeeded === 'Yes'
-    },
-    // 6.
-    {
-        type: 'input',
-        name: 'usageDetails',
-        message: '6. How should this repository be used? Explain.',
-    },
-    // 7.
-    {
-        type: 'input',
-        name: 'githubUsername',
-        message: '7. What is you GitHub username? '
-    },
-    // 8.
-    {
-        type: 'input',
-        name: 'email',
-        message: '8. What is your email address?'
-    },
-    // 9.
-    {
-        type: 'input',
-        name: 'testingNames',
-        message: '9. Provide any testing  information required for this application.'
-    },
-    // 10.
-    {
-        type: 'input',
-        name: 'emailQuestions',
-        message: '10. Instructions on how to contact me. If you have questions' 
-    }
+    // // 5.
+    // {
+    //     type: 'list',
+    //     name: 'installationNeeded',
+    //     message: '5. Do you need to mention a special installation instruction?',
+    //     choices: ['Yes', 'No']
+    // },
+    // // 5a.
+    // {
+    //     type: 'input',
+    //     name: 'installationInfo',
+    //     message: '5a. How should the information be installed?',
+    //     when: (answers) => answers.installationNeeded === 'Yes'
+    // },
+    // // 6.
+    // {
+    //     type: 'input',
+    //     name: 'usageDetails',
+    //     message: '6. How should this repository be used? Explain.',
+    // },
+    // // 7.
+    // {
+    //     type: 'input',
+    //     name: 'githubUsername',
+    //     message: '7. What is you GitHub username? '
+    // },
+    // // 8.
+    // {
+    //     type: 'input',
+    //     name: 'email',
+    //     message: '8. What is your email address?'
+    // },
+    // // 9.
+    // {
+    //     type: 'input',
+    //     name: 'testingNames',
+    //     message: '9. Provide any testing  information required for this application.'
+    // },
+    // // 10.
+    // {
+    //     type: 'input',
+    //     name: 'emailQuestions',
+    //     message: '10. Instructions on how to contact me. If you have questions' 
+    // }
 ];
 
 

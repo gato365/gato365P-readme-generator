@@ -1,6 +1,19 @@
 
 
 
+
+const licensesData1 = require('./licenses-json');
+
+
+var fullLicences1 = licensesData1.map(function(x){
+    return x[Object.keys(x)[0]];
+});
+
+var abbrLicences1 = licensesData1.map(function(x){
+    return x[Object.keys(x)[1]];
+});
+
+
 // Help with license information
 // https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 //https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
@@ -14,11 +27,13 @@ function renderLicenseBadge(license) {
 
   if (license !== null) {
 
-    return '[![License](https://img.shields.io/badge/License-' + license + '-lightblue.svg)]()';
+let tmpShortLicense = licensesData1.filter( element => element["license-name"] === license);  
+let shortLicense = tmpShortLicense[0]['license-abbrev'];
+
+return '[![License](https://img.shields.io/badge/License-' + shortLicense + '-lightblue.svg)]()';
   } else{
     return ''
   }
-  
 }
 
 // TODO: Create a function that returns the license link
