@@ -41,7 +41,7 @@ function renderLicenseBadge(license) {
 // Date Created: (FLEX Staff)
 // Date Modified: 11/27/2022
 // Name: renderLicenseLink
-// Purpose: Create a function that returns the license link If there is no license, return an empty string
+// Purpose:  returns the license link If there is no license, return an empty string
 // Input: license
 // Output: NA
 // Notes: NA
